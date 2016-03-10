@@ -1,0 +1,36 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "http://maven.burtsev.net"
+    }
+    jcenter()
+}
+
+apply plugin: 'java'
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+dependencies {
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.20.0'
+    compile 'com.google.apis:google-api-services-drive:v3-rev6-1.20.0'
+    compile 'com.google.gdata.gdata-java-client:gdata-client-1.0:1.47.1'
+    compile 'com.google.gdata.gdata-java-client:gdata-spreadsheet-3.0:1.47.1'
+/*
+    compile 'org.apache.cxf:cxf-rt-frontend-jaxws:3.1.4'
+    compile 'org.apache.cxf:cxf-rt-transports-http:3.1.4'
+
+    compile 'com.opencsv:opencsv:3.7'
+
+    compile 'cc.catalysts.boot:cat-boot-report-pdf:0.0.9' */
+
+    compile 'com.github.axet:wget:1.2.17'
+
+    testCompile 'org.mockito:mockito-core:1.+'
+    testCompile 'junit:junit:4.12'
+}
